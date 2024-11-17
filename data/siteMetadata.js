@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'Rational Numbers: Why Math Matters',
   author: 'RationalNumbers.org',
   headerTitle: 'Rational Numbers',
-  description: 'Discover why math matters with real-world applications and resources designed to enable teachers to inspire middle and high school students.',
+  description:
+    'Discover why math matters with real-world applications and resources designed to enable teachers to inspire middle and high school students.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'http://rationalnumbers.org/',
