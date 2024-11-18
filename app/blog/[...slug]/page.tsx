@@ -7,18 +7,16 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs, allAuthors } from 'contentlayer/generated'
 import type { Authors, Blog } from 'contentlayer/generated'
-import PostSimple from '@/layouts/PostSimple'
+// import PostSimple from '@/layouts/PostSimple'
 import PostLayout from '@/layouts/PostLayout'
-import PostBanner from '@/layouts/PostBanner'
+// import PostBanner from '@/layouts/PostBanner'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 
 const defaultLayout = 'PostLayout'
 const layouts = {
-  PostSimple,
   PostLayout,
-  PostBanner,
 }
 
 export async function generateMetadata(props: {
@@ -95,8 +93,6 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
     const authorResults = allAuthors.find((p) => p.slug === author)
     return coreContent(authorResults as Authors)
   })
-
-  console.log('POST2 page.tsx', post.youtubeEndTime)
 
   const mainContent = coreContent(post)
   const jsonLd = post.structuredData

@@ -23,6 +23,9 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 }
 
 interface LayoutProps {
+  youtubeVideoId: string | undefined
+  youtubeStartTime: number | undefined
+  youtubeEndTime: number | undefined
   content: CoreContent<Blog>
   authorDetails: CoreContent<Authors>[]
   next?: { path: string; title: string }
@@ -94,11 +97,13 @@ export default function PostLayout({
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">
-                <YoutubeEmbed
-                  youtubeVideoId={youtubeVideoId}
-                  youtubeStartTime={youtubeStartTime}
-                  youtubeEndTime={youtubeEndTime}
-                />
+                {youtubeVideoId && (
+                  <YoutubeEmbed
+                    youtubeVideoId={youtubeVideoId}
+                    youtubeStartTime={youtubeStartTime ?? 0}
+                    youtubeEndTime={youtubeEndTime ?? 0}
+                  />
+                )}
                 {children}
               </div>
             </div>

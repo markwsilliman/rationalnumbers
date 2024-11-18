@@ -32,7 +32,7 @@ const YoutubeEmbed = ({ youtubeVideoId, youtubeStartTime, youtubeEndTime }: Prop
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
-      {youtubeEndTime && youtubeStartTime && (
+      {youtubeEndTime && youtubeEndTime && (
         <div>
           Video length {convertSecondsToMinutesAndSeconds(youtubeEndTime - youtubeStartTime)}{' '}
           (Cropped from {convertSecondsToMinutesAndSeconds(youtubeStartTime)} to{' '}
