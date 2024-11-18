@@ -104,7 +104,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
     }
   })
 
-  const Layout = layouts[post.layout || defaultLayout]
+  const Layout = layouts[defaultLayout]
 
   return (
     <>
