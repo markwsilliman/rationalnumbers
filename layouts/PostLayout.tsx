@@ -7,6 +7,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
+import YoutubeEmbed from '@/components/YoutubeEmbed'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
@@ -29,7 +30,16 @@ interface LayoutProps {
   children: ReactNode
 }
 
-export default function PostLayout({ content, authorDetails, next, prev, children }: LayoutProps) {
+export default function PostLayout({
+  youtubeVideoId,
+  youtubeStartTime,
+  youtubeEndTime,
+  content,
+  authorDetails,
+  next,
+  prev,
+  children,
+}: LayoutProps) {
   const { filePath, path, slug, date, title, tags } = content
   return (
     <SectionContainer>
@@ -83,7 +93,14 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
+              <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">
+                <YoutubeEmbed
+                  youtubeVideoId={youtubeVideoId}
+                  youtubeStartTime={youtubeStartTime}
+                  youtubeEndTime={youtubeEndTime}
+                />
+                {children}
+              </div>
             </div>
             <footer>
               <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">

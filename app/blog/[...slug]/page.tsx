@@ -95,6 +95,9 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
     const authorResults = allAuthors.find((p) => p.slug === author)
     return coreContent(authorResults as Authors)
   })
+
+  console.log('POST2 page.tsx', post.youtubeEndTime)
+
   const mainContent = coreContent(post)
   const jsonLd = post.structuredData
   jsonLd['author'] = authorDetails.map((author) => {
@@ -112,7 +115,15 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
+      <Layout
+        youtubeVideoId={post.youtubeVideoID}
+        youtubeStartTime={post.youtubeStartTime}
+        youtubeEndTime={post.youtubeEndTime}
+        content={mainContent}
+        authorDetails={authorDetails}
+        next={next}
+        prev={prev}
+      >
         <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
       </Layout>
     </>

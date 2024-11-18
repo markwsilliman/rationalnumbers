@@ -108,7 +108,7 @@ export const Blog = defineDocumentType(() => ({
     layout: { type: 'string' },
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
-    youtubeUrl: { type: 'string' },
+    youtubeVideoID: { type: 'string' },
     youtubeStartTime: { type: 'number' },
     youtubeEndTime: { type: 'number' },
   },
