@@ -65,12 +65,15 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         <dt className="sr-only">Youtube</dt>
                         <dd>
                           {author.youtubeChannelName && author.youtubeChannelUrl && (
-                            <>Video by <Link
-                              href={author.youtubeChannelUrl}
-                              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                            >
-                              {author.name}
-                            </Link></>
+                            <>
+                              Video by{' '}
+                              <Link
+                                href={author.youtubeChannelUrl}
+                                className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                              >
+                                {author.name}
+                              </Link>
+                            </>
                           )}
                         </dd>
                       </dl>
