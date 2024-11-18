@@ -24,6 +24,7 @@ import rehypePrismPlus from 'rehype-prism-plus'
 import rehypePresetMinify from 'rehype-preset-minify'
 import siteMetadata from './data/siteMetadata'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
+import { Youtube } from './components/social-icons/icons'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
@@ -107,6 +108,9 @@ export const Blog = defineDocumentType(() => ({
     layout: { type: 'string' },
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
+    youtubeUrl: { type: 'string' },
+    youtubeStartTime: { type: 'number' },
+    youtubeEndTime: { type: 'number' },
   },
   computedFields: {
     ...computedFields,
@@ -141,6 +145,8 @@ export const Authors = defineDocumentType(() => ({
     linkedin: { type: 'string' },
     github: { type: 'string' },
     layout: { type: 'string' },
+    youtubeChannelUrl: { type: 'string' },
+    youtubeChannelName: { type: 'string' },
   },
   computedFields,
 }))
