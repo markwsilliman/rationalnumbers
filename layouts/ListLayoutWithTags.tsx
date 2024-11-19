@@ -2,6 +2,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 import { slug } from 'github-slugger'
 import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
@@ -83,7 +84,7 @@ export default function ListLayoutWithTags({
         <div className="flex sm:space-x-24">
           <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded bg-gray-50 pt-5 shadow-md dark:bg-gray-900/70 dark:shadow-gray-800/40 sm:flex">
             <div className="px-6 py-4">
-              {pathname === "/" ? (
+              {pathname === '/' ? (
                 <h3 className="font-bold uppercase text-primary-500">All Posts</h3>
               ) : (
                 <Link
@@ -124,7 +125,7 @@ export default function ListLayoutWithTags({
                 if (post.images && post.images.length == 1) {
                   imgagePath = post.images[0]
                 }
-                  
+
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
@@ -138,7 +139,17 @@ export default function ListLayoutWithTags({
                       </dl> */}
                       <div className="space-y-3">
                         <div>
-                          {title && (<Link href={`/${path}`} className="text-gray-900 dark:text-gray-100"><img src={imgagePath} alt={title} className="w-full h-48 object-cover rounded-t-lg" /></Link>)}
+                          {title && (
+                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                              <Image
+                                width={500}
+                                height={286}
+                                src={imgagePath}
+                                alt={title}
+                                className="h-48 w-full rounded-t-lg object-cover"
+                              />
+                            </Link>
+                          )}
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
                               {title}
