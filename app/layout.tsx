@@ -100,7 +100,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SectionContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
               <Header />
-              <div className="text-sm">We help middle and high school math teachers engage students with free video clips showcasing real-world applications of everyday math concepts.</div>
+              <div className="text-sm">
+                We help middle and high school math teachers engage students with free video clips
+                showcasing real-world applications of everyday math concepts.
+              </div>
               <main className="mb-auto">{children}</main>
             </SearchProvider>
             <Footer />
