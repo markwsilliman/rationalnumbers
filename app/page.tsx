@@ -30,11 +30,17 @@ export default function BlogPage() {
   }
 
   return (
-    <ListLayout
-      posts={posts}
-      initialDisplayPosts={initialDisplayPosts}
-      pagination={pagination}
-      title="Why Math Matters"
-    />
+    <>
+      <div className="text-sm">
+        We help middle and high school math teachers engage students with free video clips
+        showcasing real-world applications of everyday math concepts.
+      </div>
+      <ListLayout
+        posts={posts}
+        initialDisplayPosts={initialDisplayPosts}
+        pagination={pagination}
+        title="Why Math Matters"
+      />
+    </>
   )
 }
