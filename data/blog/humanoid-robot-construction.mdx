@@ -1,0 +1,278 @@
+---
+title: 'Humanoid robot powered by computer vision'
+date: '2024-08-06'
+lastmod: '2024-08-06'
+tags: ['physics', 'algebra', 'robotics', 'computer vision', 'middle school', 'high school']
+draft: false
+summary: 'A humanoid robot by Boston Dynamics uses computer vision to navigate a construction site.'
+images: ['/static/images/humanoidconstruction.png']
+authors: ['Boston Dynamics']
+youtubeVideoID: -e1_QhJ1EhQ
+youtubeStartTime: 0
+youtubeEndTime: 71
+---
+
+## Introduction
+
+A humanoid robot named Atlas by Boston Dynamics uses computer vision to navigate a construction site.
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## MIDDLE SCHOOL: How Does Boston Dynamics’ Atlas Robot Navigate a Construction Site?
+
+Imagine a robot that can walk, run, jump, and even do a backflip! Boston Dynamics’ Atlas is one such robot, designed to move like a human. But how does it navigate tricky environments like a construction site, where there are obstacles, uneven ground, and constantly changing surroundings? The secret lies in **mathematics**. Let’s explore how Atlas uses math to move and make decisions in a chaotic environment.
+
+---
+
+### The Challenges of a Construction Site
+
+Construction sites are full of challenges:
+
+- **Uneven surfaces**: The ground can be rocky, muddy, or slanted.
+- **Obstacles**: Tools, bricks, and machinery can block the way.
+- **Dynamic changes**: Things are always moving—workers, cranes, or even wind can alter the site quickly.
+
+For Atlas to navigate such a place, it needs to solve complex problems involving **geometry**, **physics**, and **decision-making**—all powered by math.
+
+---
+
+### Step 1: Sensing the Environment
+
+Atlas uses sensors to "see" the world around it. These sensors collect data about distances, angles, and the shapes of objects. One key sensor is called **LiDAR**, which works like a laser scanner to measure distances.
+
+Imagine Atlas standing in front of a pile of bricks. It uses math to figure out:
+
+- How far the bricks are.
+- What angle it must move to go around them.
+- Whether it should step over or walk around the pile.
+
+This involves understanding a mathematical concept called **triangulation**, which uses geometry to calculate distances. If a LiDAR sensor sends a laser beam to a point and measures the time it takes to return, the distance \( d \) can be calculated using:
+
+$$
+\mathbf{d = \frac{t \cdot c}{2}}
+$$
+
+where:
+
+- $$ \mathbf{t}$$ is the time it takes for the laser to return.
+- $$ \mathbf{c}$$ is the speed of light.
+
+By repeating this process for many points, Atlas creates a 3D map of its surroundings!
+
+---
+
+### Step 2: Planning the Path
+
+Once Atlas knows where obstacles are, it needs to figure out the best path to take. This involves solving a **graph problem**. Think of a graph as a network of possible routes Atlas can take. Each path has a "cost," which could depend on:
+
+- The distance to the goal.
+- The risk of slipping or falling.
+- The time it will take to complete the path.
+
+Atlas uses algorithms like **A\* (A-star)** to find the shortest and safest path. For example, if Atlas needs to move from Point A to Point B, it calculates:
+
+$$
+\mathbf{f(x) = g(x) + h(x)}
+$$
+
+where:
+
+- $$\mathbf{g(x)}$$ is the cost of moving from the start to the current position.
+- $$\mathbf{h(x)}$$ is the estimated cost to reach the goal.
+
+This allows Atlas to plan a smart route, avoiding obstacles and minimizing effort.
+
+---
+
+### Step 3: Balancing and Walking
+
+Walking on two legs isn’t easy for a robot! Atlas uses math to keep its balance, even on uneven ground. This involves understanding **center of mass** and **stability**.
+
+When Atlas takes a step, it calculates its center of mass to make sure it doesn’t fall. The robot uses equations from physics, such as:
+
+$$
+\mathbf{F = m \cdot a}
+$$
+
+where:
+
+- $$\mathbf{F}$$ is the force needed to stay balanced.
+- $$\mathbf{m}$$ is the robot's mass.
+- $$\mathbf{a}$$ is the acceleration as Atlas moves.
+
+By constantly adjusting its movements, Atlas can balance on one leg, step over obstacles, or even jump across gaps.
+
+---
+
+### Why Is This Important?
+
+Atlas isn’t just a cool robot—it shows how math can solve real-world problems. Robots like Atlas could help in dangerous situations, such as:
+
+- **Construction sites**: Delivering tools or building materials.
+- **Disaster zones**: Rescuing people trapped under rubble.
+- **Space exploration**: Navigating unknown terrain on other planets.
+
+---
+
+### Math in Action: Your Turn!
+
+Try this activity: Imagine you’re designing a robot to cross a room with toys scattered on the floor. What math would your robot need to:
+
+1. Measure the distance to each toy?
+2. Plan a path that avoids the toys?
+3. Stay balanced while stepping over a toy?
+
+Think about how you could use geometry, graph algorithms, and physics to help your robot succeed!
+
+---
+
+Math isn’t just about solving problems on paper—it’s a tool to build amazing technologies like Atlas. Who knows? Maybe one day you’ll design the next great robot! 🚀
+
+## HIGH SCHOOL: How Does Boston Dynamics’ Atlas Robot Navigate a Construction Site?
+
+Imagine a robot that can walk, run, jump, and even do a backflip! Boston Dynamics’ Atlas robot is designed to move like a human, tackling challenging environments. But how does it navigate a complex place like a construction site, where obstacles, uneven ground, and constant changes make movement difficult? The answer lies in **mathematics**. Let’s dive into the math that helps Atlas navigate safely and efficiently, including some trigonometry and calculus.
+
+---
+
+### Challenges of a Construction Site
+
+Construction sites are some of the toughest environments for robots to handle. They are full of:
+
+- **Uneven terrain**: Rocky, slanted, or soft ground can make walking tricky.
+- **Obstacles**: Debris, tools, or machinery might block the path.
+- **Dynamic changes**: People, moving equipment, and even wind can alter the environment rapidly.
+
+Atlas overcomes these challenges using advanced math concepts in **sensing**, **path planning**, and **balance control**.
+
+---
+
+### Step 1: Sensing the Environment
+
+Atlas starts by "seeing" its surroundings. It uses sensors like cameras and **LiDAR** to scan the area and create a 3D map. LiDAR works by sending out laser beams and measuring the time it takes for the beam to bounce back. Using this data, Atlas calculates distances to objects.
+
+For example, to measure the distance $$\mathbf{d}$$ to an obstacle, Atlas uses the formula:
+
+$$
+\mathbf{d = \frac{t \cdot c}{2}}
+$$
+
+where:
+
+- $$\mathbf{t}$$ is the time the laser beam takes to return.
+- $$\mathbf{c}$$ is the speed of light.
+
+### Using Trigonometry for Angles and Navigation
+
+To understand the angles of slopes or the placement of objects, Atlas uses **trigonometry**. For example, if Atlas needs to calculate the angle $$\mathbf{\theta}$$ of a slope, it measures the height $$\mathbf{h}$$ and the base $$\mathbf{b}$$ of the slope:
+
+$$
+\mathbf{\tan(\theta) = \frac{h}{b}}
+$$
+
+From this, the angle can be calculated as:
+
+$$
+\mathbf{\theta = \arctan\left(\frac{h}{b}\right)}
+$$
+
+This helps Atlas decide how to adjust its balance and how much force to apply when climbing or descending slopes.
+
+---
+
+### Step 2: Planning a Path
+
+Once Atlas has a 3D map, it needs to decide the best way to reach its goal. This is where **graph theory** comes in. The environment is represented as a graph, where:
+
+- Nodes are possible positions the robot can move to.
+- Edges are the connections between these positions, each with a "cost."
+
+Atlas uses an algorithm called **A\* (A-star)** to find the shortest and safest path. The cost of each edge considers:
+
+1. Distance: Shorter paths are preferred.
+2. Difficulty: Slippery or uneven terrain has a higher cost.
+3. Time: Faster paths are prioritized.
+
+The A\* algorithm calculates the total cost $$\mathbf{f(x)}$$ of a path using:
+
+$$
+\mathbf{f(x) = g(x) + h(x)}
+$$
+
+where:
+
+- $$\mathbf{g(x)}$$ is the cost to reach the current position.
+- $$\mathbf{h(x)}$$ is the estimated cost to reach the goal.
+
+This mathematical approach ensures Atlas avoids obstacles while reaching its destination efficiently.
+
+---
+
+### Step 3: Staying Balanced with Calculus
+
+Walking on two legs might seem simple for humans, but for a robot, it’s incredibly complex! Atlas needs to maintain its balance, even on uneven ground or when carrying objects. This requires a deep understanding of **physics** and **calculus**.
+
+#### Controlling the Center of Mass
+
+Atlas must calculate its **center of mass** (COM) at all times to avoid tipping over. The position of the COM is affected by the position of its legs, arms, and the objects it carries. To keep its balance, Atlas continuously adjusts its movements by analyzing the rate of change of forces.
+
+If $$\mathbf{x(t)}$$ represents the robot's position over time, the velocity $$\mathbf{v(t)}$$ is given by the first derivative:
+
+$$
+\mathbf{v(t) = \frac{dx(t)}{dt}}
+$$
+
+And the acceleration $$\mathbf{a(t)}$$ is the second derivative:
+
+$$
+\mathbf{a(t) = \frac{d^2x(t)}{dt^2}}
+$$
+
+By monitoring $$\mathbf{v(t)}$$ and $$\mathbf{a(t)}$$, Atlas can predict when it might lose balance and adjust its legs to stabilize itself.
+
+#### Calculating Forces for Stability
+
+When stepping on an uneven surface, Atlas uses Newton's second law of motion:
+
+$$
+\mathbf{F = m \cdot a}
+$$
+
+However, the force is not always applied vertically. If Atlas is on a slope, the force is split into components. Using trigonometry, the force along the slope $$\mathbf{F_{\parallel}}$$ is:
+
+$$
+\mathbf{F_{\parallel} = m \cdot g \cdot \sin(\theta)}
+$$
+
+where:
+
+- $$\mathbf{m}$$ is the robot’s mass.
+- $$\mathbf{g}$$ is the acceleration due to gravity.
+- $$\mathbf{\theta}$$ is the angle of the slope.
+
+By analyzing these components, Atlas ensures it applies the correct forces to avoid slipping or toppling.
+
+---
+
+### Why Is This Important?
+
+Atlas isn’t just a cool robot—it shows how math can solve real-world problems. Robots like Atlas could help in dangerous situations, such as:
+
+- **Construction sites**: Delivering tools or building materials.
+- **Disaster zones**: Rescuing people trapped under rubble.
+- **Space exploration**: Navigating unknown terrain on other planets.
+
+---
+
+### Math in Action: Your Turn!
+
+Try this activity: Imagine you’re designing a robot to cross a room with objects scattered on the floor and a ramp to climb. Use the following math to guide your robot:
+
+1. Use trigonometry to calculate the angle of the ramp.
+2. Use calculus to predict the robot’s position and velocity over time.
+3. Calculate the forces needed for balance using physics equations.
+
+Can you design a robot that makes it safely across? Let your math skills guide you!
+
+---
+
+Math isn’t just about solving equations—it’s a tool to create amazing technologies like Atlas. Who knows? Maybe one day you’ll build the next groundbreaking robot! 🚀
