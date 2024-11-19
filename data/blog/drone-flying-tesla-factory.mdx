@@ -1,10 +1,10 @@
 ---
-title: 'Robotic arms build Tesla cars'
+title: 'Robotic arms build Tesla cars with Trigonometry and Coordinate Planes'
 date: '2024-08-05'
 lastmod: '2024-08-05'
-tags: ['trigonometry', 'geometry', 'robotics']
+tags: ['trigonometry', 'geometry', 'robotics', 'middle school', 'high school']
 draft: false
-summary: 'Drone flies through Tesla factory which is powered by many robotic arms'
+summary: 'Drone flies through a Tesla factory which is powered by robotic arms'
 images: ['/static/images/roboticarm.png']
 authors: ['tesla']
 youtubeVideoID: 7-4yOx1CnXE
@@ -18,7 +18,86 @@ Watch a drone fly through a Tesla factory powered by robotic arms.
 
 <TOCInline toc={props.toc} exclude="Introduction" />
 
-## How Robotic Arms Use Math
+## MIDDLE SCHOOL: How Robotic Arms Use Cartesian Coordinates
+
+Have you ever seen a robotic arm in action? Maybe in a video or at a factory assembling cars or packaging goods? These amazing machines move with incredible precision, and behind their smooth movements lies a powerful mathematical concept: **Cartesian coordinates**. Let’s dive into how these coordinates help robotic arms know exactly where to go!
+
+---
+
+### What Are Cartesian Coordinates?
+
+Before we get into robots, let’s quickly review Cartesian coordinates. Imagine a piece of graph paper with a horizontal line (the **x-axis**) and a vertical line (the **y-axis**). These two axes meet at a point called the **origin** (0, 0). Every point on the graph can be described with two numbers:
+
+1. The distance left or right from the origin (the **x-coordinate**).
+2. The distance up or down from the origin (the **y-coordinate**).
+
+For example, the point (3, 2) is located 3 units to the right and 2 units up. Easy, right?
+
+Robotic arms use this same idea, except they sometimes add a third dimension: the **z-axis**, which represents up and down in 3D space.
+
+---
+
+### How Robotic Arms Use Cartesian Coordinates
+
+Robotic arms have joints and segments, much like our arms. To move the "hand" of the robot (called the **end effector**) to a specific location, the robot's controller needs to know the exact **coordinates** of that spot. Here's how it works:
+
+1. **Defining a Workspace**  
+   The robot's working area is defined as a 3D grid with an origin point, just like on a graph. The x, y, and z coordinates tell the robot where the end effector should go.
+
+2. **Calculating the Path**  
+   Once the robot knows the target coordinates, it calculates how each joint and segment needs to move to get there. For example, to reach the point (5, 3, 2), the robot moves 5 units along the x-axis, 3 units along the y-axis, and 2 units up along the z-axis.
+
+3. **Precision Matters**  
+   Cartesian coordinates allow robots to work with extreme precision. For example, in surgery, robotic arms must move within millimeters of accuracy to avoid mistakes.
+
+---
+
+### An Example: Drawing with a Robotic Arm
+
+Let’s say you program a robotic arm to draw a square on a piece of paper. The robot uses the following Cartesian coordinates for the corners of the square:
+
+- (0, 0)
+- (4, 0)
+- (4, 4)
+- (0, 4)
+
+The robot moves its end effector to each coordinate in order, drawing lines as it goes. Here's a diagram of the square:
+
+$$
+\mathbf{(0, 0) \rightarrow (4, 0) \rightarrow (4, 4) \rightarrow (0, 4) \rightarrow (0, 0)}
+$$
+
+By following the sequence, the robot completes the square perfectly!
+
+---
+
+### Math in Motion: Inverse Kinematics
+
+Robotic arms don’t just move straight from point A to point B. Their joints bend and rotate to achieve the right position. This process involves solving **inverse kinematics**, which is a fancy way of saying, "figuring out how each part of the arm moves to reach the target coordinates." For now, just know that math makes these calculations possible!
+
+---
+
+### Why Cartesian Coordinates Are Important
+
+Using Cartesian coordinates, robotic arms can:
+
+- **Assemble** products like phones, cars, and computers.
+- **Perform surgeries** with incredible precision.
+- **Assist scientists** in labs by handling dangerous materials.
+
+Without Cartesian coordinates, robots wouldn’t know where to move or how to position themselves in space!
+
+---
+
+### Try It Yourself!
+
+Want to see Cartesian coordinates in action? Grab some graph paper and a pencil. Pick a few coordinates and connect the dots to create shapes like a triangle or a star. You’ve just done what robotic arms do—use math to navigate space!
+
+---
+
+The next time you see a robotic arm in action, remember the math that makes it all possible. Cartesian coordinates turn ideas into movements, helping robots build the world around us!
+
+## HIGH SCHOOL: How Robotic Arms Use Trigonometry
 
 Imagine a robotic arm as a fancy crane made of connected pieces (called links) that move at joints. These arms can pick up and place objects very precisely, and to do that, they use a lot of math. Let's break it down and make it simple!
 
