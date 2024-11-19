@@ -1,10 +1,10 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Rational Numbers: Why Math Matters',
+  title: 'Rational Numbers: Helping Math Teachers Show Why Math Matters',
   author: 'RationalNumbers.org',
   headerTitle: 'Rational Numbers',
   description:
-    'Discover why math matters with real-world applications and resources designed to enable teachers to inspire middle and high school students.',
+    'Engage your students and show them why math matters with free video clips that showcase real-world applications of math concepts. Each clip includes relatable examples and practical explanations to bring your lessons to life. Perfect for middle and high school math teachers!',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'http://rationalnumbers.org/',
