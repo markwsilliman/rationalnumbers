@@ -1,0 +1,242 @@
+---
+title: 'Using vectors to make images that will never be blurry'
+date: '2024-08-07'
+lastmod: '2024-08-07'
+tags: ['computer graphics', 'geometry', 'trigonometry', 'middle school', 'high school']
+draft: false
+summary: 'If you zoom too far into a JPG image it will be blurry.  There is another way to save images using math which will never be blurry no matter how far you zoom in!'
+images: ['/static/images/vectorgraphics.png']
+authors: ['sparketh']
+youtubeVideoID: TGCJwmmU9mI
+youtubeStartTime: 0
+youtubeEndTime: 37
+---
+
+## Introduction
+
+If you zoom too far into a JPG image (also known as raster) it will be blurry. There is another way to save images using math which will never be blurry no matter how far you zoom in!
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## MIDDLE SCHOOL: How Is Math Used to Generate Vector Images?
+
+Have you ever seen graphics that stay crisp and clear no matter how much you zoom in? These are called **vector images**, and they’re made using **math**! Unlike regular pictures, which are made of tiny dots called pixels, vector images are created using shapes, lines, and curves described by mathematical formulas.
+
+Let’s explore how math helps us make these amazing images!
+
+---
+
+### What Are Vector Images?
+
+A vector image is built using simple shapes like:
+
+- **Lines**
+- **Circles**
+- **Polygons (shapes with many sides, like triangles or squares)**
+
+Each shape is drawn using math. Instead of saying "color this specific pixel," vector images say "draw a line from this point to this point" or "create a circle with this center and size."
+
+The cool thing about vector images is that they don’t lose quality when you zoom in or resize them. That’s because they’re created with math formulas, not pixels.
+
+---
+
+### How Does Math Create Vector Images?
+
+#### 1. Placing Points and Drawing Lines
+
+Every shape in a vector image starts with **points**, which are located using **coordinates** on a grid. A point has two numbers:
+
+- $$\mathbf{x}$$ tells us how far across the point is.
+- $$\mathbf{y}$$ tells us how far up the point is.
+
+For example, the point $$\mathbf{(3, 2)}$$ is three steps to the right and two steps up from the bottom-left corner of the grid.
+
+To draw a line, we connect two points:
+
+- Start point: $$\mathbf{(x_1, y_1)}$$
+- End point: $$\mathbf{(x_2, y_2)}$$
+
+---
+
+#### 2. Making Curves
+
+Curves in vector images are created using special math tools called **Bézier curves**. These curves are controlled by points:
+
+- A **start point** and an **end point** tell us where the curve begins and ends.
+- A **control point** shapes the curve by "pulling" it toward itself.
+
+For example, imagine stretching a rubber band between two points. If you pull the band in the middle, it forms a curve. The control point works the same way!
+
+The computer calculates the curve by blending all these points together using math. Designers use these curves to create smooth arcs and shapes.
+
+---
+
+#### 3. Changing Shapes
+
+Vector graphics are easy to change because they’re made with math. You can:
+
+- **Move** a shape by changing its coordinates.
+- **Resize** a shape by multiplying its size by a number.
+- **Rotate** a shape by turning it around a point.
+
+For example:
+
+- If a square starts at $$\mathbf{(2, 3)}$$, moving it 2 steps right and 1 step up changes its position to $$\mathbf{(4, 4)}$$.
+- If a circle has a size of 5, multiplying its size by 2 makes it twice as large.
+
+---
+
+### Why Are Vector Images Important?
+
+Vector images are everywhere! They are used in:
+
+- **Logos**: Companies use vector graphics so their logos stay sharp and clear no matter how big or small they are.
+- **Cartoons**: Animators use vector graphics to create smooth, colorful characters.
+- **Maps**: Roads and locations can be resized perfectly for any screen size.
+
+Because vector images are created with math, they’re smaller in file size and easier to edit than regular images made of pixels.
+
+---
+
+### Try Making Your Own Vector Shapes!
+
+Here’s a fun activity:
+
+1. Draw a grid on paper.
+2. Pick two points and connect them with a straight line.
+3. Add more points and connect them to create a shape, like a triangle or a star.
+
+If you want to get creative, imagine you’re a computer and describe the shapes you’re drawing using points, lines, and sizes. That’s how vector images are made!
+
+---
+
+Math isn’t just about solving equations—it’s also a creative tool that helps make the graphics and animations we see every day. Maybe one day you’ll create your own amazing designs using math-powered vector images! 🚀
+
+## HIGH SCHOOL: How Is Math Used to Generate Vector Images?
+
+Have you ever seen crisp, clear graphics that look perfect no matter how much you zoom in? These are called **vector images**, and they’re created using **math**! Unlike regular pictures, which are made of tiny dots (pixels), vector images are made using lines, curves, and shapes described by mathematical equations.
+
+Let’s explore how math powers these amazing images and why they’re so important in graphic design, logos, and animations!
+
+---
+
+### What Are Vector Images?
+
+A vector image is created by combining basic geometric shapes like:
+
+- **Lines**
+- **Circles**
+- **Polygons**
+
+Each shape is described using **coordinates** and mathematical formulas instead of pixels. This means you can scale a vector image up or down infinitely without losing any quality.
+
+For example:
+
+- A straight line in a vector image is described by its **start point** and **end point**.
+- A circle is described using its **center point** and **radius**.
+
+These shapes are then filled with colors or patterns to create beautiful, scalable graphics.
+
+---
+
+### Math Behind Vector Images
+
+#### 1. Using Coordinates to Place Shapes
+
+Every vector shape starts with a point, which is described by its **coordinates** on a grid. For example, a point $$\mathbf{(x, y)}$$ tells us where to place something on a two-dimensional space.
+
+A line is drawn by connecting two points:
+
+- Start point: $$\mathbf{(x_1, y_1)}$$
+- End point: $$\mathbf{(x_2, y_2)}$$
+
+The formula for the line can be written as:
+
+$$
+\mathbf{y = mx + b}
+$$
+
+where:
+
+- $$\mathbf{m}$$ is the slope of the line (how steep it is).
+- $$\mathbf{b}$$ is the y-intercept (where the line crosses the y-axis).
+
+This math ensures the line is drawn accurately between the two points.
+
+---
+
+#### 2. Curves with Bézier Equations
+
+One of the coolest features of vector images is the ability to create **smooth curves**. These are made using something called **Bézier curves**, which are powered by math.
+
+A simple Bézier curve is defined by:
+
+- A **start point** $$\mathbf{P_0}$$
+- An **end point** $$\mathbf{P_1}$$
+- A **control point** $$\mathbf{P_c}$$ that shapes the curve
+
+The equation for a Bézier curve is:
+
+$$
+\mathbf{P(t) = (1-t)^2 \cdot P_0 + 2(1-t)t \cdot P_c + t^2 \cdot P_1}
+$$
+
+Here:
+
+- $$\mathbf{t}$$ is a value between 0 and 1 that moves along the curve.
+- The curve smoothly transitions from $$\mathbf{P_0}$$ to $$\mathbf{P_1}$$ based on $$\mathbf{P_c}$$.
+
+By adjusting the control point, designers can create arcs, loops, and other smooth shapes.
+
+---
+
+#### 3. Transformations: Rotating, Scaling, and Moving Shapes
+
+In vector graphics, math is also used to **transform** shapes. For example:
+
+- **Scaling**: Making a shape larger or smaller.
+- **Rotation**: Turning a shape around a point.
+- **Translation**: Moving a shape to a new location.
+
+These transformations use matrices, which are mathematical grids that adjust the coordinates of points.
+
+For example, to rotate a point $$\mathbf{(x, y)}$$ around the origin by an angle $$\mathbf{\theta}$$, the new coordinates $$\mathbf{(x', y')}$$ are calculated as:
+
+$$
+\mathbf{
+\begin{aligned}
+x' &= x \cdot \cos(\theta) - y \cdot \sin(\theta) \\
+y' &= x \cdot \sin(\theta) + y \cdot \cos(\theta)
+\end{aligned}
+}
+$$
+
+This math allows vector graphics to be manipulated with precision.
+
+---
+
+### Why Are Vector Images Important?
+
+Vector images are used in:
+
+- **Logos**: They stay sharp no matter how much you zoom in.
+- **Animations**: Smooth movements and transformations.
+- **Maps**: Roads and locations can scale perfectly for any screen size.
+
+Because vector images are based on math, they’re smaller in file size and incredibly flexible compared to pixel-based images.
+
+---
+
+### Math in Action: Create Your Own Vector Art!
+
+Here’s a fun challenge:
+
+1. Draw a straight line by choosing two points and using the formula $$\mathbf{y = mx + b}$$.
+2. Create a simple curve using the Bézier equation.
+3. Experiment with scaling or rotating your shapes using the transformation formulas.
+
+By combining these concepts, you can create your own vector art just like graphic designers do!
+
+---
+
+Math isn’t just for solving problems in class—it’s the tool behind the amazing graphics we see in everyday life. Who knows? Maybe one day, you’ll design the next iconic logo or animation using math-powered vector graphics! 🚀
