@@ -1,0 +1,127 @@
+---
+title: 'The Math of Survivorship Bias: Lessons from Planes and Startups'
+date: '2024-08-13'
+lastmod: '2024-08-13'
+tags: ['statistics', 'middle school', 'high school']
+draft: false
+summary: 'Learn how survivorship bias misleads us by ignoring missing data. Explore the World War II plane example, modern success stories, and how math helps us make better decisions.'
+images: ['/static/images/survivorshipbias.png']
+authors: ['eL3ctric']
+youtubeVideoID: ZyLVIvBidIA
+youtubeStartTime: 0
+youtubeEndTime: 67
+---
+
+## Introduction
+
+Learn how survivorship bias misleads us by ignoring missing data. Explore the World War II plane example, modern success stories, and how math helps us make better decisions.
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## The Math Behind Survivorship Bias: Learning from What We Don't See
+
+Imagine you're trying to improve the design of World War II planes to help more of them return safely. You look at planes that made it back and notice they have the most bullet holes in certain areas, like the wings and tail. Should you add armor there? Surprisingly, math says no. This idea is a famous example of **survivorship bias**, a concept that shows how ignoring unseen data can lead to wrong conclusions.
+
+Let’s dive into the math behind survivorship bias, explore its history, and see how it affects decisions even today.
+
+---
+
+### **1. The World War II Plane Example**
+
+During World War II, engineers analyzed returning planes to figure out where to add armor. They noticed that the surviving planes had the most damage in certain areas, such as the wings. Intuitively, one might think these areas needed extra protection. But a statistician named Abraham Wald argued the opposite.
+
+Wald realized that the engineers were only looking at planes that survived. Planes hit in critical areas—like the engine or cockpit—didn’t make it back at all. To protect planes better, armor needed to go where there was **no damage** on the surviving planes, because that’s where non-surviving planes were most likely hit.
+
+---
+
+### **2. The Math of Survivorship Bias**
+
+#### **Missing Data and Probability**
+
+Survivorship bias happens when we only consider the “survivors” of a situation and ignore the “non-survivors.” Let’s break this down with probability.
+
+Suppose:
+
+- $$\mathbf{S}$$ = “Survived the mission.”
+- $$\mathbf{H}$$ = “Hit in a specific area.”
+
+The probability of survival given a hit in a certain area is:
+
+$$
+\mathbf{P(S|H) = \frac{P(H|S) \cdot P(S)}{P(H)}}
+$$
+
+Here:
+
+- $$\mathbf{P(S|H)}$$ is the probability of survival when hit in a specific area.
+- $$\mathbf{P(H|S)}$$ is the probability that a hit in that area occurs among survivors.
+- $$\mathbf{P(S)}$$ is the overall survival rate.
+- $$\mathbf{P(H)}$$ is the total probability of being hit in that area.
+
+Wald noticed that $$\mathbf{P(H|S)}$$ (the hits observed on survivors) wasn’t representative of all hits, because it excluded data from planes that didn’t make it back.
+
+#### **Key Insight**
+
+The areas with the least damage on survivors were the critical areas causing non-survival. Thus, adding armor to the least damaged areas of returning planes was the correct decision.
+
+---
+
+### **3. Survivorship Bias in Modern Times**
+
+#### **Startups and Success Stories**
+
+Many people admire successful startups like Amazon or Apple and try to copy their strategies. But survivorship bias means we overlook the countless failed startups that followed the same strategies and still didn’t succeed.
+
+Imagine a simplified model:
+
+- $$\mathbf{S}$$ = Success,
+- $$\mathbf{F}$$ = Failure,
+- $$\mathbf{P(S|Strategy)}$$ is the probability of success given a specific strategy.
+
+If we only study companies that succeeded, we might falsely conclude that $$\mathbf{P(S|Strategy)}$$ is high, ignoring the hidden data about companies that failed.
+
+#### **Fitness and Health**
+
+Fitness influencers often promote certain workouts or diets, claiming they lead to amazing results. However, their followers might already have genetic advantages or prior experience. This creates survivorship bias because we don’t see the people for whom these methods didn’t work.
+
+#### **College Admissions**
+
+Top universities often highlight the success of their graduates. But they don’t mention the selection process that admitted highly motivated and capable students in the first place. This makes it seem like attending these schools guarantees success, which may not be entirely true.
+
+---
+
+### **4. Avoiding Survivorship Bias**
+
+How can we avoid survivorship bias in our own decisions? Math helps us think critically:
+
+1. **Identify the Missing Data**: Ask what’s missing. Are we only looking at survivors?
+2. **Consider the Entire Population**: Analyze both successes and failures. This often requires using statistical sampling methods to represent the full dataset.
+3. **Apply Bayesian Thinking**: Update probabilities with new information. Bayes’ Theorem is a powerful tool:
+
+$$
+\mathbf{P(H|S) = \frac{P(S|H) \cdot P(H)}{P(S)}}
+$$
+
+In the World War II example, this helped Wald infer what was happening to planes that didn’t return.
+
+---
+
+### **5. Why Survivorship Bias Matters**
+
+Understanding survivorship bias is critical in many fields:
+
+- **Science**: Ensures experiments include all data, not just successful trials.
+- **Medicine**: Helps avoid overestimating a treatment’s effectiveness by including patients for whom it failed.
+- **Personal Decisions**: Encourages you to consider unseen factors when learning from others’ success stories.
+
+---
+
+### **Challenge Problem for You**
+
+Suppose you analyze the grades of students who graduated from a rigorous program. You find that the average GPA is 3.9. If the program only admits students with at least a 3.5 GPA, is the average GPA a fair representation of all students who applied? Why or why not?
+
+---
+
+### **Conclusion**
+
+Survivorship bias teaches us to think beyond what’s visible and ask, “What are we missing?” Whether it’s planes in WWII, modern startups, or fitness trends, math helps us avoid misleading conclusions. By understanding this concept, you can make better decisions—and even spot biases that others might miss!
