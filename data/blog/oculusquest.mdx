@@ -1,0 +1,265 @@
+---
+title: 'How Math Helps Virtual Reality Track Your Movement'
+date: '2024-08-15'
+lastmod: '2024-08-15'
+tags: ['statistics', 'trigonometry', 'geometry', 'middle school', 'high school', 'video games']
+draft: false
+summary: 'Learn how VR headsets like the Oculus Quest 3 use math to track your position in a room. Explore how coordinates, vectors, and distance measurements bring virtual worlds to life.'
+images: ['/static/images/virtualreality.png']
+authors: ['metaquest']
+youtubeVideoID: 60yP8f5E-B4
+youtubeStartTime: 127
+youtubeEndTime: 157
+---
+
+## Introduction
+
+Learn how VR headsets like the Oculus Quest 3 use math to track your position in a room. Explore how coordinates, vectors, and distance measurements bring virtual worlds to life.
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## MIDDLE SCHOOL: How Math Helps Virtual Reality Headsets Track Your Movement
+
+Have you ever tried a virtual reality (VR) headset, like the Oculus Quest 3? VR headsets make you feel like you’re inside a game or another world. But have you ever wondered how the headset knows where you are in the room and how you’re moving?
+
+The secret is **math**! Let’s explore how VR headsets use math to track your location and make the virtual world feel real.
+
+---
+
+### **1. Tracking Your Position in the Room**
+
+When you wear a VR headset, it tracks your position in the room using cameras and sensors. The headset creates a 3D map of the space around you and calculates your location using **coordinates**.
+
+Think of the room as a giant grid, like graph paper. Every point in the room has three coordinates:
+
+- $$\mathbf{x}$$ for how far left or right,
+- $$\mathbf{y}$$ for how far up or down,
+- $$\mathbf{z}$$ for how far forward or backward.
+
+The position of the headset can be written as a point:
+
+$$
+\mathbf{(x, y, z)}
+$$
+
+For example, if your headset is at $$\mathbf{x = 2 \, m}$$, $$\mathbf{y = 1.5 \, m}$$, and $$\mathbf{z = 3 \, m}$$, this means you are 2 meters to the right, 1.5 meters off the ground, and 3 meters forward from the starting point.
+
+---
+
+### **2. How Cameras Help Map the Room**
+
+The Oculus Quest 3 uses cameras to see the space around you. These cameras detect landmarks, like edges of furniture or walls, and calculate the distance to them. This is called **SLAM** (Simultaneous Localization and Mapping).
+
+#### **Measuring Distance**
+
+To find how far away something is, the headset uses a method called **stereo vision**. It compares images from two cameras, like how your eyes see slightly different views of the world. The distance to an object, $$\mathbf{D}$$, can be calculated using:
+
+$$
+\mathbf{D = \frac{f \cdot B}{x}}
+$$
+
+Where:
+
+- $$\mathbf{f}$$ is the focal length of the camera lens (how much it focuses light),
+- $$\mathbf{B}$$ is the distance between the cameras (called the baseline),
+- $$\mathbf{x}$$ is the difference in how far apart the object appears in the two camera images.
+
+The smaller the value of $$\mathbf{x}$$, the farther away the object is.
+
+---
+
+### **3. Tracking Your Movement**
+
+As you move, the headset constantly updates your position. If you step forward, your $$\mathbf{z}$$ coordinate increases. If you crouch, your $$\mathbf{y}$$ coordinate decreases.
+
+The change in position is called a **vector**, which shows both the direction and distance of your movement. For example, if your position changes from:
+
+$$
+\mathbf{(x_1, y_1, z_1)} \, \text{to} \, \mathbf{(x_2, y_2, z_2)},
+$$
+
+then the vector of your movement is:
+
+$$
+\mathbf{\Delta \vec{r} = (x_2 - x_1, y_2 - y_1, z_2 - z_1)}.
+$$
+
+If you moved from $$\mathbf{(2, 1.5, 3)}$$ to $$\mathbf{(3, 1.5, 4)}$$, your movement vector is:
+
+$$
+\mathbf{\Delta \vec{r} = (3 - 2, 1.5 - 1.5, 4 - 3) = (1, 0, 1)}.
+$$
+
+This means you moved 1 meter to the right and 1 meter forward.
+
+---
+
+### **4. Preventing Collisions**
+
+The VR headset also keeps you safe by warning you if you’re about to hit a wall. The cameras constantly calculate your distance to nearby objects. If the distance is less than a certain amount, say 0.5 meters, the headset shows a boundary to stop you from walking into it.
+
+---
+
+### **5. The Role of Math in Smooth Gameplay**
+
+To make VR feel real, the headset updates your position many times per second. Each update involves:
+
+- Tracking coordinates,
+- Calculating distances,
+- Mapping your movement vector.
+
+The faster these calculations happen, the smoother the experience feels.
+
+---
+
+### **Challenge Problem for You**
+
+Imagine you are wearing a VR headset, and your starting position is $$\mathbf{(0, 1.5, 0)}$$. You walk forward 2 meters and then step 1 meter to the right.
+
+1. What are your new coordinates?
+2. What is the vector of your movement?
+
+---
+
+### **Why This Is Cool**
+
+Virtual reality uses math to turn movements in the real world into actions in a virtual one. From measuring distances to tracking positions, math makes VR experiences possible. Who knows? Maybe one day, you’ll help design the next big VR breakthrough!
+
+## HIGH SCHOOL: The Math Behind How Virtual Reality Tracks Your Movement
+
+Virtual reality (VR) headsets like the Oculus Quest 3 transport you into immersive digital worlds where you can explore, play games, or even attend virtual events. But how does a VR headset know where you are in the room and how you’re moving? The answer lies in **math**! From geometry to calculus to statistics, VR tracking relies on a range of mathematical tools to keep your virtual experience smooth and responsive.
+
+Let’s explore how VR headsets use math to track your position and motion in a 3D space.
+
+---
+
+### **1. Mapping Your Location in 3D Space**
+
+VR headsets track your position using a 3D coordinate system. Think of the room as a grid with three axes:
+
+- $$\mathbf{x}$$ for left/right,
+- $$\mathbf{y}$$ for up/down,
+- $$\mathbf{z}$$ for forward/backward.
+
+At any moment, your position can be represented as a point:
+
+$$
+\mathbf{(x, y, z)}
+$$
+
+For example, if your headset is at $$\mathbf{x = 1 \, m}$$, $$\mathbf{y = 1.5 \, m}$$, and $$\mathbf{z = 2 \, m}$$, you are 1 meter to the right, 1.5 meters off the ground, and 2 meters forward from the starting point.
+
+---
+
+### **2. Using Cameras to Map the Room**
+
+The Oculus Quest 3 uses outward-facing cameras to scan the environment. These cameras identify objects, like walls or furniture, and calculate their distances using **stereo vision**. Stereo vision works by comparing two images taken from slightly different angles, similar to how your eyes perceive depth.
+
+#### **Calculating Distance with Trigonometry**
+
+To find the distance to an object, the headset uses the formula:
+
+$$
+\mathbf{D = \frac{f \cdot B}{x}}
+$$
+
+Where:
+
+- $$\mathbf{D}$$ is the distance to the object,
+- $$\mathbf{f}$$ is the focal length of the camera lens,
+- $$\mathbf{B}$$ is the baseline (distance between the two cameras),
+- $$\mathbf{x}$$ is the disparity, or the difference in the object’s position between the two images.
+
+If $$\mathbf{f = 50 \, mm}$$, $$\mathbf{B = 70 \, mm}$$, and $$\mathbf{x = 2 \, mm}$$, the distance to the object is:
+
+$$
+\mathbf{D = \frac{50 \cdot 70}{2} = 1750 \, mm \, = 1.75 \, m}.
+$$
+
+---
+
+### **3. Tracking Your Motion**
+
+As you move, the VR headset updates your position in real-time. This involves calculating the change in your position over time, called the **velocity vector**:
+
+$$
+\mathbf{\vec{v} = \frac{\Delta \vec{r}}{\Delta t}}
+$$
+
+Where:
+
+- $$\mathbf{\Delta \vec{r}}$$ is the change in position,
+- $$\mathbf{\Delta t}$$ is the change in time.
+
+For example, if you move from $$\mathbf{(1, 1.5, 2)}$$ to $$\mathbf{(2, 1.5, 3)}$$ in 1 second, your velocity vector is:
+
+$$
+\mathbf{\vec{v} = \frac{(2 - 1, 1.5 - 1.5, 3 - 2)}{1} = (1, 0, 1) \, m/s}.
+$$
+
+The headset uses this vector to predict your next position and keep the virtual environment aligned with your movements.
+
+---
+
+### **4. Rotations and Angles**
+
+VR headsets also track the angle of your head as you look around. This involves measuring **rotations** using angles like pitch (up/down), yaw (left/right), and roll (tilt).
+
+Rotational movements are calculated using **quaternions** or **Euler angles**, but a simpler example uses trigonometry. If the camera detects a landmark at an angle $$\mathbf{\theta}$$, the height of the object can be calculated as:
+
+$$
+\mathbf{h = D \cdot \tan(\theta)}
+$$
+
+Where:
+
+- $$\mathbf{D}$$ is the distance to the object,
+- $$\mathbf{\theta}$$ is the angle of elevation.
+
+---
+
+### **5. Using Statistics to Improve Accuracy**
+
+No tracking system is perfect—there’s always some noise in the data. VR headsets use **statistics** to reduce errors and improve accuracy.
+
+#### **Kalman Filters**
+
+A common tool is the **Kalman filter**, which combines sensor data and predictions to estimate your position. The Kalman filter updates its estimate using the formula:
+
+$$
+\mathbf{x_k = x_{k-1} + K \cdot (z_k - x_{k-1})}
+$$
+
+Where:
+
+- $$\mathbf{x_k}$$ is the updated position,
+- $$\mathbf{x_{k-1}}$$ is the previous position,
+- $$\mathbf{z_k}$$ is the new measurement,
+- $$\mathbf{K}$$ is the Kalman gain, which balances prediction and measurement.
+
+This statistical method smooths out sudden jumps in data, creating a seamless VR experience.
+
+---
+
+### **6. Preventing Collisions**
+
+VR headsets also warn you if you’re about to walk into a wall. By continuously measuring distances to objects, the headset calculates when you’re getting too close. If the distance falls below a certain threshold, it shows a warning boundary in the virtual world.
+
+---
+
+### **Challenge Problem for You**
+
+Suppose your starting position in a VR room is $$\mathbf{(0, 1.5, 0)}$$, and you move in the following steps:
+
+1. Walk forward 2 meters.
+2. Step 1 meter to the right.
+3. Look up at an angle of $$\mathbf{30^\circ}$$ and see an object 5 meters away.
+
+4. What are your new coordinates after the first two steps?
+5. Using $$\mathbf{h = D \cdot \tan(\theta)}$$, calculate the height of the object.
+
+---
+
+### **Why This Matters**
+
+Virtual reality combines math and technology to create immersive experiences. From geometry and trigonometry to statistics, VR tracking systems rely on math to make your movements feel natural. The next time you step into a virtual world, remember the math that makes it possible!
