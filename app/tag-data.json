@@ -1,1 +1,17 @@
-{"statistics":4,"trigonometry":6,"geometry":4,"matrix":3,"middle-school":9,"high-school":9,"film":3,"calculus":2,"autonomous-vehicles":1,"robotics":3,"space":1,"algebra":3,"computer-graphics":1,"physics":1,"computer-vision":1}
+{
+  "statistics": 4,
+  "trigonometry": 6,
+  "geometry": 4,
+  "matrix": 3,
+  "middle-school": 9,
+  "high-school": 9,
+  "film": 3,
+  "calculus": 2,
+  "autonomous-vehicles": 1,
+  "robotics": 3,
+  "space": 1,
+  "algebra": 3,
+  "computer-graphics": 1,
+  "physics": 1,
+  "computer-vision": 1
+}
