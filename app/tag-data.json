@@ -1,12 +1,1 @@
-{
-  "film": 1,
-  "algebra": 2,
-  "trigonometry": 3,
-  "middle-school": 4,
-  "high-school": 4,
-  "computer-graphics": 1,
-  "geometry": 2,
-  "physics": 1,
-  "robotics": 2,
-  "computer-vision": 1
-}
+{"trigonometry":5,"geometry":3,"robotics":3,"middle-school":8,"high-school":8,"space":1,"algebra":3,"calculus":2,"film":2,"physics":1,"computer-vision":1,"statistics":3,"computer-graphics":1,"matrix":2,"autonomous-vehicles":1}

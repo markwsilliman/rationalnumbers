@@ -1,0 +1,271 @@
+---
+title: 'How Math Powers Computer Vision for Self-Driving Cars'
+date: '2024-08-10'
+lastmod: '2024-08-10'
+tags:
+  [
+    'statistics',
+    'calculus',
+    'matrix',
+    'autonomous vehicles',
+    'robotics',
+    'middle school',
+    'high school',
+  ]
+draft: false
+summary: 'Discover how math enables self-driving cars to interpret the world. Learn about image processing, object detection, motion tracking, and decision-making, all powered by equations and algorithms.'
+images: ['/static/images/zoox.png']
+authors: ['zoox']
+youtubeVideoID: 5E2NYmgvo3E
+youtubeStartTime: 0
+youtubeEndTime: 160
+---
+
+## Introduction
+
+Discover how math enables self-driving cars to interpret the world. Learn about image processing, object detection, motion tracking, and decision-making, all powered by equations and algorithms.
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## MIDDLE SCHOOL: How Math Helps Self-Driving Cars See the World
+
+Have you ever wondered how self-driving cars work? These cars can drive on their own, stop at red lights, avoid obstacles, and even make decisions like when to turn. But how do they do it? The secret is **math**!
+
+Self-driving cars use cameras and sensors to “see” the world. Then, they use math to understand what’s around them and figure out the safest way to drive. Let’s explore how math helps these amazing vehicles.
+
+---
+
+### **1. Turning Pictures into Numbers**
+
+Self-driving cars use cameras to take pictures of the road, but computers don’t understand pictures the way we do. To a computer, a picture is just a grid of numbers. Each number represents how bright or colorful a pixel is.
+
+For example, a small black-and-white picture might look like this:
+
+$$
+\mathbf{I} =
+\begin{bmatrix}
+10 & 20 & 30 \\
+40 & 50 & 60 \\
+70 & 80 & 90
+\end{bmatrix}
+$$
+
+The car uses math to analyze these numbers and figure out what’s in the picture—like roads, stop signs, or other cars.
+
+---
+
+### **2. Measuring Distances**
+
+A self-driving car needs to know how far away things are to avoid crashing. This is where **geometry** comes in. The car can use two cameras to estimate the distance to an object by comparing how the object looks in each camera’s view. This method is called **triangulation**.
+
+Here’s the formula:
+
+$$
+\mathbf{D = \frac{f \cdot B}{x}}
+$$
+
+Where:
+
+- $$\mathbf{D}$$ is the distance to the object,
+- $$\mathbf{f}$$ is the camera’s focal length (a number that describes how the camera focuses light),
+- $$\mathbf{B}$$ is the distance between the two cameras,
+- $$\mathbf{x}$$ is the difference in the object’s position between the two images.
+
+This formula helps the car calculate distances quickly and accurately.
+
+---
+
+### **3. Tracking Moving Objects**
+
+To stay safe, a self-driving car must watch how objects like bicycles or pedestrians move. Math helps the car predict where those objects will go next.
+
+If a pedestrian is walking across the road at a steady pace, the car can estimate how far they’ll move in a certain amount of time by using this simple formula:
+
+$$
+\mathbf{distance = speed \cdot time}
+$$
+
+For example, if the pedestrian is walking at $$\mathbf{2 \, m/s}$$ and the car predicts their position 3 seconds later, it multiplies:
+
+$$
+\mathbf{distance = 2 \cdot 3 = 6 \, meters}
+$$
+
+By knowing how far objects will move, the car can plan its path and avoid accidents.
+
+---
+
+### **4. Learning to Recognize Objects**
+
+Self-driving cars also need to know what they’re looking at—a stop sign, a crosswalk, or another vehicle. This is where **machine learning** comes in. Machine learning uses math to teach computers how to recognize patterns.
+
+The car uses a type of math called **neural networks**, which rely on an equation like this:
+
+$$
+\mathbf{y = w \cdot x + b}
+$$
+
+Where:
+
+- $$\mathbf{y}$$ is the result (like whether the object is a stop sign or not),
+- $$\mathbf{w}$$ is a weight (a number that tells the network how important a feature is),
+- $$\mathbf{x}$$ is the input (like the shape of the object),
+- $$\mathbf{b}$$ is a bias (a number that adjusts the result).
+
+By practicing with lots of images, the car learns to recognize objects with high accuracy.
+
+---
+
+### **5. Making Safe Decisions**
+
+Once the car understands what’s around it, it needs to decide what to do next. For example, if a pedestrian steps into a crosswalk, the car has to decide whether to stop or slow down. This decision involves **probability**.
+
+The car might calculate the likelihood of different events, like this:
+
+$$
+\mathbf{P(event) = \frac{favorable \ outcomes}{total \ outcomes}}
+$$
+
+If the probability of hitting the pedestrian is too high, the car will stop. These calculations happen in milliseconds to keep everyone safe.
+
+---
+
+### **Why It Matters**
+
+Self-driving cars are an exciting technology that could make our roads safer and transportation more accessible. Math is the key to helping these cars see, think, and make decisions. The next time you hear about self-driving cars, remember the incredible math that powers them!
+
+---
+
+### **Challenge Problem for You**
+
+A self-driving car uses two cameras 1 meter apart to measure the distance to a stop sign. The cameras have a focal length of $$\mathbf{f = 800 \, pixels}$$, and the stop sign appears 50 pixels apart in the two images. Use the formula for triangulation:
+
+$$
+\mathbf{D = \frac{f \cdot B}{x}}
+$$
+
+How far away is the stop sign?
+
+---
+
+Math isn’t just for solving problems in class—it’s a tool that helps shape the future. Maybe one day, you’ll use math to design self-driving cars or other amazing technologies!
+
+## HIGH SCHOOL: How Math Powers Computer Vision for Self-Driving Cars
+
+Self-driving cars are a glimpse into the future—vehicles that navigate roads, avoid obstacles, and make decisions without human input. How do they “see” the world? The answer lies in computer vision, a field of technology where math plays a crucial role.
+
+Computer vision enables autonomous vehicles to interpret the world through cameras, sensors, and mathematical algorithms. Let’s explore the math that makes this possible.
+
+---
+
+### **1. Understanding Images with Math**
+
+A self-driving car uses cameras to capture images of its surroundings. But how does it process those images? Images are stored as grids of numbers, with each number representing the brightness or color of a pixel.
+
+For example, a grayscale image can be represented as a matrix:
+
+$$
+\mathbf{I} =
+\begin{bmatrix}
+45 & 60 & 78 \\
+90 & 110 & 120 \\
+130 & 150 & 170
+\end{bmatrix}
+$$
+
+Here, $$\mathbf{I}$$ is the image, and each number corresponds to the brightness of a pixel. To identify objects, the car applies mathematical transformations to these matrices, such as edge detection, which highlights the boundaries of objects.
+
+---
+
+### **2. Detecting Objects Using Geometry**
+
+To drive safely, a self-driving car must recognize objects like pedestrians, stop signs, and other vehicles. This involves geometry and algebra.
+
+For example, if a car needs to measure the distance to an object, it uses **triangulation**. The equation is:
+
+$$
+\mathbf{D = \frac{f \cdot B}{x}}
+$$
+
+Where:
+
+- $$\mathbf{D}$$ is the distance to the object,
+- $$\mathbf{f}$$ is the focal length of the camera,
+- $$\mathbf{B}$$ is the baseline distance between two cameras,
+- $$\mathbf{x}$$ is the difference in the position of the object in the two images (disparity).
+
+By solving this equation, the car can estimate how far away an object is and avoid collisions.
+
+---
+
+### **3. Tracking Motion with Calculus**
+
+Self-driving cars must track how objects move, like a bicycle crossing the road. To do this, they calculate the object’s velocity using derivatives, which are part of calculus.
+
+The velocity $$\mathbf{v}$$ of an object is given by:
+
+$$
+\mathbf{v = \frac{dx}{dt}}
+$$
+
+Where:
+
+- $$\mathbf{x}$$ is the position of the object,
+- $$\mathbf{t}$$ is time.
+
+Using this formula, the car predicts where the object will be in the future and adjusts its path accordingly.
+
+---
+
+### **4. Neural Networks and Machine Learning**
+
+Self-driving cars rely on artificial intelligence (AI) to recognize patterns and make decisions. At the heart of AI is a mathematical structure called a **neural network**, which processes information in layers. Each layer applies weights and biases to the data using the equation:
+
+$$
+\mathbf{y = w \cdot x + b}
+$$
+
+Where:
+
+- $$\mathbf{y}$$ is the output,
+- $$\mathbf{w}$$ is the weight,
+- $$\mathbf{x}$$ is the input,
+- $$\mathbf{b}$$ is the bias.
+
+These networks “learn” by adjusting $$\mathbf{w}$$ and $$\mathbf{b}$$ to minimize error, using a process called **gradient descent**, which involves derivatives.
+
+---
+
+### **5. Making Decisions with Probability**
+
+Self-driving cars don’t just recognize objects—they decide what to do next. For example, if a pedestrian steps onto a crosswalk, the car must decide whether to stop. This involves **probability**.
+
+The car calculates the likelihood of different events using equations like:
+
+$$
+\mathbf{P(event) = \frac{favorable \ outcomes}{total \ outcomes}}
+$$
+
+If the probability of a collision is high, the car will stop. These calculations happen in real time to ensure safety.
+
+---
+
+### **Why It Matters**
+
+The math behind computer vision allows self-driving cars to see, think, and act. By using matrices, geometry, calculus, and probability, these vehicles can navigate complex environments safely and efficiently. The next time you see an autonomous car, remember the incredible math making it possible!
+
+---
+
+### **Challenge Problem for You**
+
+A self-driving car uses two cameras 1 meter apart to measure the distance to a stop sign. The cameras have a focal length of $$\mathbf{f = 800 \, pixels}$$, and the stop sign appears 50 pixels apart in the two images. Use the formula for triangulation:
+
+$$
+\mathbf{D = \frac{f \cdot B}{x}}
+$$
+
+How far away is the stop sign?
+
+---
+
+Math is the driving force behind autonomous vehicles. Who knows? Maybe one day, you’ll help develop the next breakthrough in this exciting field!
