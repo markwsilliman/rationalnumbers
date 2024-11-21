@@ -1,0 +1,177 @@
+---
+title: 'How Robots Use Math to Solve Rubik’s Cubes in a Flash!'
+date: '2024-08-01'
+lastmod: '2024-08-01'
+tags: ['trigonometry', 'geometry', 'robotics', 'computer vision']
+draft: false
+summary: 'Learn how math and computer vision help robots solve Rubik’s Cubes in under a second. Discover the amazing algorithms and problem-solving skills behind this feat of technology.'
+images: ['/static/images/rubikscube.png']
+authors: ['benkatz']
+youtubeVideoID: nt00QzKuNVY
+youtubeStartTime: 0
+youtubeEndTime: 31
+---
+
+<TOCInline toc={props.toc} exclude="Introduction" />
+
+## MIDDLE SCHOOL: How Robots Solve Rubik’s Cubes in Less Than a Second
+
+Have you ever wondered how robots can solve a Rubik’s Cube faster than a blink of an eye? It might seem like magic, but it’s actually math at work! Robots use computer vision, algorithms, and precise calculations to solve the cube in under a second. Let’s explore how math makes this amazing feat possible.
+
+---
+
+### The Rubik’s Cube: A Math Puzzle
+
+The Rubik’s Cube is a puzzle made up of six faces, each with nine smaller squares. When scrambled, the cube can be in any of **43 quintillion possible combinations** (that’s 43 followed by 18 zeros). Despite this huge number, a robot can find the shortest solution to solve the cube. How does it do that? By turning the puzzle into math!
+
+---
+
+### Step 1: Seeing the Cube with Computer Vision
+
+The first step for a robot is to "see" the cube and understand its current state. Robots use cameras and **computer vision** to identify the colors on each square of the cube. Each color is assigned a number, for example:
+
+- White = $$1$$
+- Red = $$2$$
+- Blue = $$3$$
+- Green = $$4$$
+- Yellow = $$5$$
+- Orange = $$6$$
+
+Once the robot scans the cube, it creates a grid of numbers representing the colors on all six faces. This grid helps the robot work with the cube as a mathematical object.
+
+For example, the robot might see a scrambled face as:
+
+$$
+\begin{bmatrix}
+1 & 3 & 5 \\
+2 & 4 & 6 \\
+5 & 1 & 3
+\end{bmatrix}
+$$
+
+---
+
+### Step 2: Finding the Solution with Algorithms
+
+Now that the robot knows the cube's state, it needs to figure out the fastest way to solve it. Robots use special algorithms to calculate the solution. An **algorithm** is just a set of steps or instructions.
+
+One key algorithm robots use is called **God’s Number**. This algorithm proves that any scrambled Rubik’s Cube can be solved in 20 moves or fewer. The robot uses math to calculate the shortest sequence of moves to reach the solved state.
+
+To do this, the robot applies concepts like:
+
+1. **Optimization**: Finding the best and fastest solution.
+2. **Graph theory**: Imagining all possible cube states as points on a map connected by moves. The robot searches this map to find the shortest path from the scrambled state to the solved state.
+
+Here’s a simplified equation the robot might use:
+
+$$
+\text{Moves} = \text{Shortest path from current state to solved state}
+$$
+
+By breaking down the problem into small, logical steps, the robot ensures it doesn’t waste any moves.
+
+---
+
+### Step 3: Solving the Cube with Precision
+
+Once the robot calculates the solution, it uses motors to physically twist and turn the cube. Let’s say the robot determines the sequence of moves is:
+
+$$
+\text{Sequence} = \{\text{Right, Up, Left, Down, Up}\}
+$$
+
+Its mechanical arms quickly follow these steps, solving the cube in less than a second. Robots are so fast because they don’t hesitate or make mistakes—they execute each step perfectly.
+
+---
+
+### Why Math is the Real Hero
+
+Without math, solving the Rubik’s Cube this quickly would be impossible. Math helps robots:
+
+- Understand the cube by turning colors into numbers.
+- Use algorithms to find the shortest solution.
+- Control their movements with precision and accuracy.
+
+So the next time you see a robot solving a Rubik’s Cube, remember: math is the true genius behind the scenes!
+
+---
+
+### Try It Yourself!
+
+While robots can solve Rubik’s Cubes in a flash, you can learn to solve one too! By understanding the patterns and logic behind the cube, you’ll start to see the math in action. Plus, solving the Rubik’s Cube is a fun way to sharpen your problem-solving skills.
+
+---
+
+## HIGH SCHOOL: How Robots Use Math and Computer Vision to Solve a Rubik’s Cube in Less Than a Second
+
+Imagine a robot solving a Rubik's Cube faster than you can blink. It might seem like magic, but it's all about math, computer vision, and robotics working together. This article will break down how these robots work and the mathematical concepts behind their incredible speed.
+
+---
+
+### Step 1: Seeing the Cube – Computer Vision
+
+The first step in solving the Rubik's Cube is "seeing" it. Robots equipped with cameras use computer vision to recognize the colors of each face of the cube. This process involves mathematical techniques such as matrix transformations and trigonometry to interpret the 3D orientation of the cube from 2D images.
+
+When the robot captures an image, the RGB color values of each square on the cube are analyzed and classified. Computer vision algorithms use matrices to process these images efficiently. For instance, the transformation from a 3D cube to a 2D camera plane can be expressed as:
+
+$$
+\mathbf{P} = \mathbf{K} \cdot \mathbf{R} \cdot \mathbf{C}
+$$
+
+Where:
+
+- $$\mathbf{P}$$ is the 2D projection matrix.
+- $$\mathbf{K}$$ is the camera’s intrinsic matrix, containing details like focal length.
+- $$\mathbf{R}$$ is the rotation matrix, determined by the cube’s orientation.
+- $$\mathbf{C}$$ is the cube's 3D position matrix.
+
+This math allows the robot to understand where each color is located on the cube.
+
+---
+
+### Step 2: Planning the Solution – Algorithms and Optimization
+
+Once the robot knows the cube's state, it calculates the optimal sequence of moves to solve it. This involves an algorithm called the **Kociemba Algorithm**, which minimizes the number of moves required.
+
+The Kociemba Algorithm uses group theory from abstract algebra, dividing the cube's solving process into two phases:
+
+1. Reduce the cube into a simpler state.
+2. Solve the simplified state in the fewest moves possible.
+
+The robot minimizes moves by solving for a cost function:
+
+$$
+\mathbf{Cost} = \sum_{i=1}^{n} \mathbf{f}(\mathbf{m}_i)
+$$
+
+Where:
+
+- $$\mathbf{m}_i$$ represents each move.
+- $$\mathbf{f}(\mathbf{m}_i)$$ calculates the time or complexity of the move.
+- $$n$$ is the total number of moves.
+
+By reducing $$\mathbf{Cost}$$, the robot ensures it finds the most efficient solution.
+
+---
+
+### Step 3: Executing the Moves – Robotics and Physics
+
+Once the robot has the solution, it uses its motors to execute the moves. The motors must be incredibly precise and fast, as solving the cube in under a second requires rapid rotations. Robots often use high-speed servos that can make small angle adjustments using trigonometry.
+
+For example, to rotate a face of the cube, the robot calculates the angular displacement $$\mathbf{\theta}$$ using:
+
+$$
+\mathbf{\theta} = \arctan\left(\frac{\mathbf{y}}{\mathbf{x}}\right)
+$$
+
+Where $$\mathbf{x}$$ and $$\mathbf{y}$$ are the distances from the motor axis to the edges of the cube. This ensures smooth, accurate movements.
+
+---
+
+### Why Is Math So Important Here?
+
+- **Computer Vision**: Matrix transformations and linear algebra help the robot interpret the cube’s position.
+- **Optimization Algorithms**: Abstract algebra and optimization theory allow the robot to plan the fastest solution.
+- **Precise Movement**: Trigonometry ensures that the robot moves the cube’s faces accurately.
+
+Robots like these highlight how mathematics enables machines to perform tasks with incredible speed and precision. Next time you see a Rubik’s Cube, remember that solving it isn’t just about trial and error—it’s about the power of math and technology working together!

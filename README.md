@@ -11,13 +11,13 @@
 
 ### Blog Post
 
-1. Though you can write your content from scratch it's often to have the [Math in Action custom GPT](https://chatgpt.com/g/g-673cd07fe6f88191b220164a887a9447-math-in-action) (built on top of ChatGPT) do the first copy for you.
+1. Though you can write your content from scratch it's often more efficient to have the [Math in Action custom GPT](https://chatgpt.com/g/g-673cd07fe6f88191b220164a887a9447-math-in-action) (built on top of ChatGPT) do the first copy for you.
 2. You will want to do two prompts. One for middle school and the second for high school. Copy and paste the following examples and change the subject.
 
 - For Middle School:
 
 ```
-Write an article for middle school students discussing how math is used to successfully land the SpaceX boosters autonomously. Change all mathbf to use block math (with a $$ in front and back). For example change ( \mathbf{t} ) to $$\mathbf{t}$$.
+Write an article for middle school students discussing how math is used to successfully land the SpaceX boosters autonomously.  Provide markdown format which will be copied to a mdx file.  Include at least 2 math equations. Change all mathbf to use block math (with a $$ in front and back). For example change ( \mathbf{t} ) to $$\mathbf{t}$$.
 
 Remember that middle school students do not know calculus and therefore the article cannot include derivates. Additionally middle school students do not know trigonometry and therefore the article cannot include cos, sin, tan.
 
@@ -28,7 +28,7 @@ After the article is created suggest a title and description as well as an image
 
 ```
 
-Write an article for high school students explaining the math behind the monty hall problem and how it can help them win gameshows. Change all mathbf to use block math (with a $$ in front and back). For example change \( \mathbf{t} \) to $$\mathbf{t}$$.
+Write an article for high school students explaining the math behind the monty hall problem and how it can help them win gameshows.  Provide markdown format which will be copied to a mdx file.  Include at least 2 math equations. Change all mathbf to use block math (with a $$ in front and back). For example change \( \mathbf{t} \) to $$\mathbf{t}$$.
 
 Remember that high school students do know calculus and therefore the article can include derivates. Additionally high school students do know trigonometry and therefore the article can include cos, sin, tan. Additionally high school students know statistics so you can include that.
 
