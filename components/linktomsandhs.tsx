@@ -7,37 +7,33 @@ const LinkToMSandHS = () => {
   const [targetHSId, setTargetHSId] = useState('')
 
   useEffect(() => {
-    // Find the first <h2> starting with "MIDDLE SCHOOL"
+    // Find the first <h2> starting with "MIDDLE SCHOOL" and "HIGH SCHOOL"
     const headers = document.querySelectorAll('h2')
+    let msId = ''
+    let hsId = ''
     for (const header of headers) {
-      if (
-        !targetMSId &&
-        header.textContent &&
-        header.textContent.trim().startsWith('MIDDLE SCHOOL')
-      ) {
-        setTargetMSId(header.id)
+      if (!msId && header.textContent && header.textContent.trim().startsWith('MIDDLE SCHOOL')) {
+        msId = header.id
       }
-      if (
-        !targetHSId &&
-        header.textContent &&
-        header.textContent.trim().startsWith('HIGH SCHOOL')
-      ) {
-        setTargetHSId(header.id)
+      if (!hsId && header.textContent && header.textContent.trim().startsWith('HIGH SCHOOL')) {
+        hsId = header.id
       }
     }
+    setTargetMSId(msId)
+    setTargetHSId(hsId)
   }, [])
 
-  return targetMSId && targetHSId ? (
-    <div className="my-4 rounded-lg border p-4">
-      Teachers, let us help you show your students how math is applied in the video. To tailor the
-      explanation to your students, please let us know whether you teach{' '}
-      <Link href={`#${targetMSId}`}>middle school</Link> or{' '}
-      <Link href={`#${targetHSId}`}>high school</Link>, and we’ll guide you to the appropriate
-      section.
-    </div>
-  ) : (
-    <></>
-    // <p>Section not found</p>
+  return (
+    targetMSId &&
+    targetHSId && (
+      <div className="my-4 rounded-lg border p-4">
+        Teachers, let us help you show your students how math is applied in the video. To tailor the
+        explanation to your students, please let us know whether you teach{' '}
+        <Link href={`#${targetMSId}`}>middle school</Link> or{' '}
+        <Link href={`#${targetHSId}`}>high school</Link>, and we’ll guide you to the appropriate
+        section.
+      </div>
+    )
   )
 }
 

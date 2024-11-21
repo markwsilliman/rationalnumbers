@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { slug } from 'github-slugger'
+import { Button } from '@headlessui/react'
 interface Props {
   youtubeVideoId: string
   youtubeStartTime: number
@@ -58,9 +59,9 @@ const YoutubeEmbed = ({ youtubeVideoId, youtubeStartTime, youtubeEndTime }: Prop
           <div className="flex items-center">
             The video is {convertSecondsToMinutesAndSeconds(youtubeEndTime - youtubeStartTime)}{' '}
             long.&nbsp;
-            <Link href="#" onClick={handleClick} className={isVisible ? 'hidden' : 'block'}>
+            <Button onClick={handleClick} className={isVisible ? 'hidden' : 'block'}>
               {informationIconForYoutubeEmbed()}
-            </Link>
+            </Button>
           </div>
           <div className={isVisible ? 'block' : 'hidden'} id="youtubeCroppingDetailsHidden">
             {' '}
