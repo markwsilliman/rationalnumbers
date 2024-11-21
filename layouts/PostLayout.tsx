@@ -7,6 +7,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
+import LinkToMSandHS from '@/components/linktomsandhs'
 import YoutubeEmbed from '@/components/YoutubeEmbed'
 import siteMetadata from '@/data/siteMetadata'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
@@ -104,6 +105,7 @@ export default function PostLayout({
                     youtubeEndTime={youtubeEndTime ?? 0}
                   />
                 )}
+                <LinkToMSandHS />
                 {children}
               </div>
             </div>
