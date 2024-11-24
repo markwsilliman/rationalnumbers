@@ -7,7 +7,7 @@ const siteMetadata = {
     'Engage your students and show them why math matters with free video clips that showcase real-world applications of math concepts. Each clip includes relatable examples and practical explanations to bring your lessons to life. Perfect for middle and high school math teachers!',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'http://rationalnumbers.org/',
+  siteUrl: 'https://rationalnumbers.org/',
   siteRepo: 'https://github.com/markwsilliman/rationalnumbers',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
