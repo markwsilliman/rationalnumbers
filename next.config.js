@@ -20,7 +20,13 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
   {
     key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\n/g, ''),
+    value: `
+              default-src 'self';
+              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
+              connect-src 'self' https://www.google-analytics.com;
+              img-src 'self' https://www.google-analytics.com;
+              frame-src https://www.googletagmanager.com;
+            `.replace(/\s{2,}/g, " ").trim(),//ContentSecurityPolicy.replace(/\n/g, ''),
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
   {
