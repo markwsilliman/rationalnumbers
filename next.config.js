@@ -7,11 +7,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is https://www.youtube.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is https://www.youtube.com https://www.googletagmanager.com https://www.google-analytics.com;
   style-src 'self' 'unsafe-inline';
-  img-src * blob: data:;
+  img-src * blob: data: https://www.google-analytics.com;
   media-src *.s3.amazonaws.com;
-  connect-src *;
+  connect-src * https://www.google-analytics.com https://www.googletagmanager.com;
   font-src 'self';
   frame-src giscus.app https://www.youtube.com https://www.youtube-nocookie.com;
 `
@@ -20,13 +20,7 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
   {
     key: 'Content-Security-Policy',
-    value: `
-              default-src 'self';
-              script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
-              connect-src 'self' https://www.google-analytics.com;
-              img-src 'self' https://www.google-analytics.com;
-              frame-src https://www.googletagmanager.com;
-            `.replace(/\s{2,}/g, " ").trim(),//ContentSecurityPolicy.replace(/\n/g, ''),
+    value: ContentSecurityPolicy.replace(/\n/g, ''),
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
   {
